@@ -5,8 +5,6 @@
 
 # Assignments Part2 for R-Programming Week3
 # @written by Youngok Kim, joylife052@gmail.com
-#
-
 
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
@@ -34,8 +32,8 @@ cacheSolve <- function(x, ...) {
     }
     data <- x$get()
     
-    if(nrow(data) == ncol(data)) { # check square matrix, or not
-        if(det(data) != 0) { # if exist inverse matrix
+    if(nrow(data) == ncol(data)) {  # check square matrix, or not
+        if(det(data) != 0) {        # if exist inverse matrix
             m <- solve(data, ...)
             x$setsolve(m)
         } else{
